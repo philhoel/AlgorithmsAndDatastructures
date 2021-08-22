@@ -1,9 +1,9 @@
 
 public class ArrayList {
     
-    int[] data;
-    int capacity = 1000000;
-    int size;
+    private int[] data;
+    private int capacity = 1000000;
+    private int size;
 
     public ArrayList() {
 

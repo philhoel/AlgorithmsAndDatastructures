@@ -17,8 +17,8 @@ public class LinkedList {
         }
     }
 
-    Node head;
-    int length;
+    private Node head;
+    private int length;
 
     public LinkedList() {
 
@@ -84,8 +84,6 @@ public class LinkedList {
             for (int i = 0; i < pos-1; i++) {
                 current = current.next;
             }
-
-            //System.out.println(current.data);
 
             Node temp = current.next;
             current.next = temp.next;
