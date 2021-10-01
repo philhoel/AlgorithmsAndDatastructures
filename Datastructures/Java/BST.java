@@ -3,6 +3,7 @@
 
 public class BST {
 
+    // ---------------- Node class --------------------- //
     class Node {
         int data;
         Node left;
@@ -21,6 +22,8 @@ public class BST {
             right = r;
         }
     }
+
+    // -------------------- BST class -------------------- //
 
     Node root;
     int count;
@@ -79,6 +82,40 @@ public class BST {
         } else {
             return true;
         }
+    }
+
+    private Node findMin(Node v) {
+        Node min = v;
+        while (min.left != null) {
+            min = min.left;
+        }
+
+        return min;
+    }
+
+    public Node remove(int x, Node v) {
+        if (v == null) {
+            return null;
+        }
+
+        if (v.data < x) {
+            return remove(x, v.left);
+        }
+        if (v.data > x) {
+            return remove(x, v.right);
+        }
+        if (v.left == null) {
+            return v.right;
+        }
+        if (v.right == null) {
+            return v.left;
+        }
+
+        Node u = findMin(v.right);
+        v.data = u.data;
+        v.right = remove(u.data, v.right);
+
+        return v;
     }
 
     private void printTree(Node subroot) {

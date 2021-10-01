@@ -1,5 +1,6 @@
 public class LinkedList {
 
+    // ----------------------- Node class --------------------- //
     class Node {
 
         int data;
@@ -17,6 +18,7 @@ public class LinkedList {
         }
     }
 
+    // ------------------------- LinkedList class -------------------- //
     private Node head;
     private int length;
 
