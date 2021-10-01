@@ -1,17 +1,17 @@
 # Data Structures in Java
 
-List:
-    - ArrayList
-    - Linked List
+## List:  
+    - ArrayList  
+    - Linked List  
 
-Tree:
+## Tree:  
     - BST
-    - Example of general tree
-    - AVL Tree
+    - Example of general tree  
+    - AVL Tree  
 
-Heap:
-    - Heap made from Array
-    - Heap made from Linked List
+## Heap:
+    Heap made from Array  
+    Heap made from Linked List  
 
-HashMap:
-    - With multiple hash functions
+## HashMap:  
+    With multiple hash functions  
