@@ -1,3 +1,2 @@
-### IN2010 - Algorithms and Data strucutures
-
-All code for IN2010 in multiple languages
+# Algorithms and Data Structures
+  - Written in multiple languages
