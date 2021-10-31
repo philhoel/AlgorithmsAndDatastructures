@@ -3,9 +3,12 @@
 ## List:  
     - ArrayList  
     - Linked List  
+    - Recursive Linked List  
+    - Circular Linked List
 
 ## Tree:  
-    - BST
+    - Iterative BST  
+    - Recursive BST  
     - Example of general tree  
     - AVL Tree  
 
