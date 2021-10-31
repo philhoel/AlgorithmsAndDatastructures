@@ -19,26 +19,23 @@ public class AVLTree {
 
     public AVLTree() {
         root = null;
-        height = 0;
+        height = -1;
         count = 0;
     }
 
-    private Node addNode(int x, Node v) {
+    private Node addNode(int x, Node subroot) {
 
-        if (v == null) {
+        if (subroot == null) {
             return new Node(x);
         }
 
-        if (x > v.data) {
-            v.left = addNode(x, v.left);
+        if (x > subroot.data) {
+            subroot.left = addNode(x, subroot.left);
+        } else {
+            subroot.right = addNode(x, subroot.right);
         }
 
-        if (x >= v.data) {
-            v.right = addNode(x, v.right);
-        }
-
-        return v;
-
+        return subroot;
     }
 
     public void addNode(int x) {
@@ -51,6 +48,73 @@ public class AVLTree {
 
         addNode(x, root);
         count++;
+
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    private Node searchTree(int x, Node subroot) {
+
+        if (subroot == null) {
+            return null;
+           }
+        
+        if (subroot.data == x) {
+            return subroot;
+        }
+
+        if (subroot.data < x) {
+            return searchTree(x, subroot.left);
+        } else {
+            return searchTree(x, subroot.right);
+        }
+    }
+
+    public boolean searchTree(int x) {
+
+        Node temp;
+        temp = searchTree(x, root);
+
+        if (temp == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private int height(Node v) {
+
+        if (v == null) {
+            return -1;
+        }
+
+
+    }
+
+    public void height() {
+
+    }
+
+    public void printTree(Node v) {
+
+        if (v == null) {
+            return;
+        }
+
+        printTree(v.left);
+        System.out.println(v.data);
+        printTree(v.right);
+    }
+
+    public void printTree() {
+
+        if (root == null) {
+            System.out.println("Tree is empty!");
+        }
+
+        printTree(root);
 
     }
 
