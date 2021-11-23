@@ -39,6 +39,8 @@ public class HashMap {
 
     public String get(String k) {
 
+        return "";
+
     }
 
     public void remove(String k) {

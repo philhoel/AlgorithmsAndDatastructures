@@ -7,6 +7,8 @@ class Sorting:
     def __init__(self):
         self.data = []
 
+    ## ---------------------- Support methods ------------------ ##
+
     def addElements(self,x):
         
         if isinstance(x, int) or isinstance(x, float):
@@ -33,6 +35,8 @@ class Sorting:
 
         return A
 
+    ## ------------------ Bubble Sort -------------- ##
+
     def bubbleSort(self):
         n = len(self.data)
         for i in range(0, n-1):
@@ -40,6 +44,7 @@ class Sorting:
                 if self.data[j] > self.data[j+1]:
                     self.swap(j,j+1)
 
+    ## ------------------ Selection Sort -------------- ##
 
     def selectionSort(self):
         n = len(self.data)
@@ -51,6 +56,8 @@ class Sorting:
             if i != k:
                 self.swap(i,k)
 
+    ## ------------------ Insertion Sort -------------- ##
+
     def insertionSort(self):
         n = len(self.data)
         for i in range(1, n):
@@ -58,6 +65,8 @@ class Sorting:
             while (j > 0 and self.data[j-1] > self.data[j]):
                 self.swap(j-1, j)
                 j -= 1
+
+    ## ------------------ Merge Sort -------------- ##
 
     def _merge(self, A1, A2, A):
         i = 0
@@ -99,6 +108,7 @@ class Sorting:
 
         self.data = self._mergeSort(self.data)
 
+    ## ------------------ Quick Sort -------------- ##
 
     def _partition(self, A, low, high):
         n = len(A)
